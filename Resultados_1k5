@@ -1,0 +1,83 @@
+
+ 23-Oct-2018
+ Volt-VAr Control
+========================================================================================
+ System Input Data
+ number of busbars                : 1464
+ number of lines                  : 1474
+ number of shunt capacitors       : 8
+ number of regulating transformers: 8
+
+ substation voltage           : 1.00 pu
+ minimum allowed load voltage : 0.95 pu
+ maximum allowed load voltage : 1.05 pu
+
+ DG - number               : 5
+    - S over PG            : 1.10
+    - penetration (min)    : 34.25 percent
+    - penetration (nominal): 68.51 percent
+    - penetration (max)    : 99.34 percent
+
+ zeta - minimum: -50.00 percent
+      - maximum: +45.00 percent
+========================================================================================
+ VVC Solution
+        Reactive Power Shunt Compensation 
+        --------------------------------- 
+     Bus   Qsh     Qsh @ 1pu      min          max
+     No.   Kvar      Kvar         Kvar         Kvar
+    20    84.831    80.000        0.000       80.000
+    34  2000.067  2000.000        0.000     2000.000
+    44  2204.264  2000.000        0.000     4000.000
+   133    88.061    80.000        0.000       80.000
+   293    78.755    80.000        0.000       80.000
+   436  1085.648  1000.000        0.000     1000.000
+   576    83.571    80.000        0.000       80.000
+   693    79.680    80.000        0.000       80.000
+
+                           Regulating Transformer 
+                           ---------------------- 
+    Transformer  ------------------------Tap-----------------------
+    from  to       pu        min       max       position    steps
+    70    61     1.07500   0.92500   1.07500        15        31
+   278   733     1.05000   0.90000   1.10000        10        41
+   179    60     1.05500   0.90000   1.10000        11        41
+   143    33     1.05000   0.87500   1.12500         8        41
+   252   784     0.98000   0.90000   1.10000        -4        41
+   403    78     1.06000   0.90000   1.10000        12        41
+   358  1072     0.99500   0.92500   1.07500        -1        31
+   467  1464     1.02000   0.90000   1.10000         4        41
+
+        Smart Inverters (PV) 
+        -------------------- 
+     Bus   PG      QG           min          max       
+     No.   KW      Kvar         Kvar         Kvar       
+   153 40000.000  9506.274   -49703.521    49703.521  
+   327 30000.000 14697.445   -37277.641    37277.641 
+   353 100000.000 18459.568  -124258.803   124258.803 
+   408 10000.000  6335.652   -12425.880    12425.880  
+   506 10000.000  5842.320   -12425.880    12425.880  
+
+
+ real power loss after  VVC  : 3517.0608 kW
+ real power loss before VVC  : 3975.3798 kW
+ percentage reduction in loss: 11.53
+
+ After VVC
+ minimum bus voltage : 0.9861 pu (at bus 1332)
+ maximum bus voltage : 1.0500 pu (at bus 252)
+ 
+ Before VVC
+ minimum bus voltage : 0.9067 pu (at bus 752)
+ maximum bus voltage : 1.2405 pu (at bus 353)
+ ========================================================================================
+ Computation of dQ_by_dP
+
+ Bus   closed-form     robust      
+ No.   -----------   -----------   
+ 153     -0.0086       -0.0019       
+ 327     -0.0113       -0.0076       
+ 353      0.3159        0.3171        
+ 408      0.2124        0.2423        
+ 506     -0.0741       -0.1900       
+ ========================================================================================
