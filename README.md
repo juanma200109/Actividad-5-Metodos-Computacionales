@@ -116,28 +116,14 @@ Calcula las tensiones en los nodos mediante el método iterativo de punto fijo. 
     - using DataFrames
     - using Plots
 
-    Entradas:  
-
-    - lines: DataFrame con la información de las líneas del sistema. Contiene columnas como:
-    
-      - FROM: Nodo de envío (ej. "N1").
-      - TO: Nodo de recibo (ej. "N2").
-      - R: Resistencia de la línea.
-      - x: Resistencia de la línea.
-      - b: Susceptancia shunt de la línea.
-      - tap: Ajuste de tap en transformadores.
-
-    - nodes : DataFrame con la información de los nodos. Contiene columnas como:
-
-      - NUMBER: Número del nodo (ej. "N1").
-      - TYPE: Tipo de nodo (3 indica el nodo slack).
-
-    - Bbus  : Matriz de susceptancia reducida, obtenida de B_bus.
-
-    Salida :    
-
-    - Vn: Vector de tensiones complejas en los nodos no slack.
-    - Gráfico de convergencia del error (iteraciones vs. error en escala logarítmica).
+    Entradas : 
+            lines : Dataframe con la información de las líneas.
+            compensation : Dataframe con la información de la compensación.
+            trafos : Dataframe con la información de los transformadores.
+            loads : Dataframe con la información de las cargas.
+            gen : Dataframe con la información de las generaciones.
+    Salidas :   
+            Vns : Vector con los valores de tensión en los nodos.
 
 **random_walk_complex**
 
