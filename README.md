@@ -95,6 +95,8 @@ Construye la matriz de admitancias $(Y_{bus})$ del sistema de potencia y extrae 
 
       - NUMBER: Número del nodo (ej. "N1").
       - TYPE: Tipo de nodo (3 indica el nodo slack).
+    - Trafos : Dataframe con la información de las subestaciones.
+    - comp : Dataframe con la información de las compensaciones.
 
     Salida :    
 
